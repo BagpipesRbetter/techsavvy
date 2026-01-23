@@ -4,7 +4,19 @@
     
     // Get theme toggle button
     const themeToggle = document.getElementById('theme-toggle');
+    
+    // Exit if element not found
+    if (!themeToggle) {
+        console.warn('Theme toggle button not found');
+        return;
+    }
+    
     const themeIcon = themeToggle.querySelector('.theme-icon');
+    
+    if (!themeIcon) {
+        console.warn('Theme icon element not found');
+        return;
+    }
     
     // Check for saved theme preference or default to light mode
     const currentTheme = localStorage.getItem('theme') || 'light';
