@@ -18,13 +18,15 @@
         return;
     }
     
-    // Check for saved theme preference or default to light mode
-    const currentTheme = localStorage.getItem('theme') || 'light';
+    // Check for saved theme preference or default to dark mode
+    const currentTheme = localStorage.getItem('theme') || 'dark';
     
     // Apply the current theme on page load
     if (currentTheme === 'dark') {
         document.body.classList.add('dark-mode');
         themeIcon.textContent = '☀️';
+    } else {
+        themeIcon.textContent = '🌙';
     }
     
     // Toggle theme on button click
