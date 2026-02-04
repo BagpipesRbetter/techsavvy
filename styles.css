@@ -185,7 +185,10 @@ body.dark-mode .header {
     left: 0;
     right: 0;
     bottom: 0;
-    background: url('background.webp') center/cover no-repeat;
+    background-image: url('background.webp');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     opacity: 0.3;
     mix-blend-mode: overlay;
 }
